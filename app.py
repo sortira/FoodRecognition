@@ -28,10 +28,9 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.write(
         """
-        Welcome to the Food Recognition App! Our application uses deep learning 
-        to classify food items from images. Whether you are a food enthusiast 
-        or just curious, our model will help you recognize various food items 
-        with ease. Enjoy using the app and explore the world of food recognition!
+       Welcome to our AI-powered food recognition platform! Our website leverages advanced machine learning to identify various fruits and vegetables from images, making food classification easier and more efficient. Using a robust AI model trained on a diverse dataset, our system can accurately predict the type of food item in an uploaded image. Whether you're a researcher, developer, or food enthusiast, our tool provides a seamless experience for food recognition and categorization.
+
+With a growing emphasis on digital solutions in nutrition, food tracking, and inventory management, our platform aims to simplify food identification through AI-driven technology. Try it out and explore the power of AI in food image recognition!
         """
     )
 with col2:
