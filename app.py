@@ -19,8 +19,26 @@ def preprocess_image(img):
     img_array /= 255.0  #  Normalize
     return img_array
 
-# Streamlit UI
-st.title("Food Recognition App")
+
+st.markdown("<h1 id='about-us'>Poshaq: Food Recognition App</h2>", unsafe_allow_html=True)
+
+# About Us Section
+st.markdown("<h2 id='about-us'>About Us</h2>", unsafe_allow_html=True)
+col1, col2 = st.columns([2, 1])
+with col1:
+    st.write(
+        """
+        Welcome to the Food Recognition App! Our application uses deep learning 
+        to classify food items from images. Whether you are a food enthusiast 
+        or just curious, our model will help you recognize various food items 
+        with ease. Enjoy using the app and explore the world of food recognition!
+        """
+    )
+with col2:
+    st.image("food.jpg", caption="We recognise food!", use_container_width=True)
+
+# Home Section
+st.markdown("<h2 id='home'>Home</h2>", unsafe_allow_html=True)
 st.write("Upload an image of food and the model will predict what it is!")
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
@@ -37,3 +55,12 @@ if uploaded_file is not None:
     class_names = ['apple', 'banana', 'beetroot', 'bell pepper', 'cabbage', 'capsicum', 'carrot', 'cauliflower', 'chilli pepper', 'corn', 'cucumber', 'eggplant', 'garlic', 'ginger', 'grapes', 'jalepeno', 'kiwi', 'lemon', 'lettuce', 'mango', 'onion', 'orange', 'paprika', 'pear', 'peas', 'pineapple', 'pomegranate', 'potato', 'raddish', 'soy beans', 'spinach', 'sweetcorn', 'sweetpotato', 'tomato', 'turnip', 'watermelon']
     result = class_names[predicted_class] if predicted_class < len(class_names) else "Unknown"
     st.write(f"Prediction: **Class {result}**")
+
+# Contact Us Section
+st.markdown("<h2 id='contact-us'>Contact Us</h2>", unsafe_allow_html=True)
+st.write(
+    """
+    If you have any questions, feedback, or inquiries, feel free to reach out to us.
+    We appreciate your support and look forward to improving our Food Recognition App!
+    """
+)
