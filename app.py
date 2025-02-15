@@ -23,19 +23,26 @@ def preprocess_image(img):
 
 st.markdown("<h1 id='about-us'>Poshaq: Food Recognition App</h2>", unsafe_allow_html=True)
 
-# About Us Section
 st.markdown("<h2 id='about-us'>About Us</h2>", unsafe_allow_html=True)
-col1, col2 = st.columns([2, 1])
+
+col1, col2 = st.columns([1.5, 1])  # Adjust column width ratio for better spacing
 with col1:
     st.write(
         """
-       Welcome to our AI-powered food recognition platform! Our website leverages advanced machine learning to identify various fruits and vegetables from images, making food classification easier and more efficient. Using a robust AI model trained on a diverse dataset, our system can accurately predict the type of food item in an uploaded image. Whether you're a researcher, developer, or food enthusiast, our tool provides a seamless experience for food recognition and categorization.
+        Welcome to our AI-powered food recognition platform! Our website leverages advanced machine learning to identify various fruits and vegetables from images, making food classification easier and more efficient. 
 
-With a growing emphasis on digital solutions in nutrition, food tracking, and inventory management, our platform aims to simplify food identification through AI-driven technology. Try it out and explore the power of AI in food image recognition!
+        Using a robust AI model trained on a diverse dataset, our system can accurately predict the type of food item in an uploaded image. Whether you're a researcher, developer, or food enthusiast, our tool provides a seamless experience for food recognition and categorization.
+
+        With a growing emphasis on digital solutions in nutrition, food tracking, and inventory management, our platform aims to simplify food identification through AI-driven technology. Try it out and explore the power of AI in food image recognition!
         """
     )
+
 with col2:
     st.image("food.jpg", caption="We recognise food!", use_container_width=True)
+
+# Add spacing between the text and image
+st.write("")  
+st.write("")
 
 # Home Section
 st.markdown("<h2 id='home'>Home</h2>", unsafe_allow_html=True)
